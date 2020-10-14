@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17156" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17034"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchTry_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="0.5" alignment="left" title="Record" id="e6d-EN-Z7M">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="recordSound" destination="AgC-eL-Hgc" id="8t0-u5-Qvy"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.5" alignment="left" title="Play" id="mKj-SD-xEg">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.07138599002773055" green="0.96235281229019165" blue="0.00018501448066613604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="PlaySound" destination="AgC-eL-Hgc" id="MeK-lH-e1a"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <segue destination="RWy-5s-5b1" kind="relationship" relationship="nextPage" id="EDf-k8-Vkb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="233" y="242"/>
+        </scene>
+        <!--Health Interface Controller-->
+        <scene sceneID="ZKb-Mj-8P0">
+            <objects>
+                <controller id="RWy-5s-5b1" customClass="HealthInterfaceController" customModule="watchTry_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="7MC-WU-LZd">
+                            <fontDescription key="font" type="system" pointSize="29"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="text" destination="7MC-WU-LZd" id="ZJW-ej-rso"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="551" y="242"/>
+        </scene>
+    </scenes>
+</document>
